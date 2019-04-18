@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>For Goodness Cakes</title>
+  <style>
+  </style>
+</head>
+
+<body>
+
+<header id="header">
+  <nav class="navbar navbar-expand-lg px-4">
+    <a href="#" class="navbar-brand">
+      <img src="img/cake.png" alt="main icon" id="logoImage">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+      <span class="toggler-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav text-capitalize mx-auto">
+        <li class="nav-item active">
+          <a href="#header" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#store" class="nav-link">Store</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#services" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#cakes" class="nav-link">Order</a>
+        </li>
+      </ul>
+      <div class="nav-info-items d-none d-lg-flex">
+        <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+          <span class="cart-info__icon mr-lg-3">
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+          <p class="mb-0">
+            <span id="item-count">0</span>
+            Items - $
+            <span class="item-total">
+              0.00
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Nav -->
+  <!-- Banner -->
+  <div class="container-fluid">
+    <div class="row max-height justify-content-center align-items-center">
+      <div class="col-10 mx-auto banner text-center">
+        <h1 id="bannerTitle">
+          For Goodness <span id="secondaryColor">Cakes</span>
+        </h1>
+      </div>
+      <!-- Cart -->
+      <div class="cart" id="cart">
+       
+
+          <!-- Total -->
+          <div class="cart-total-container d-flex justify-content-around mt-5">
+            <h5>Total</h5>
+            <h5>$ <strong id="cart-total" class="font-weight-bold">0.00</strong></h5>
+          </div>
+          <!-- End of Total -->
+          <!-- Cart Buttons -->
+          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" id="clear-cart" class="btn btn-pink">Clear Cart</a>
+            <a href="#" id="clear-cart" class="btn btn-pink">Checkout</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Banner -->
+</header>
+<!-- End of Header -->
+
+<!-- About -->
+<section class="about py-5" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 mx-auto col-md-6 my-5">
+        <h1 id="aboutHead">About Us</h1>
+        <p id="aboutPara" class="my-4 w-75">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat repellendus voluptate dolorem. Aut esse ex, atque rerum autem, delectus cum repudiandae est impedit sequi ipsum quis voluptates doloremque. Porro.
+        </p>
+      </div>
+      <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+        <div class="about-img__container">
+          <img src="img/blueberryCrumbleBar2.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of About -->
+
+<!-- Store Section -->
+<section id="store" class="store py-5">
+  <div class="container">
+<!-- Section Title -->
+<div class="row">
+  <div class="col-10 mx-auto col-sm-6 text-center">
+    <h1 id="storeHeader">Our Store</h1>
+  </div>
+</div>
+<!-- End Section Title -->
+<!-- Filter Buttons -->
+<div class="row">
+  <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+    <a href="#" class="btn btn-yellow filter-btn m-2" data-filter="all">All</a>
+    <a href="#" class="btn btn-yellow filter-btn m-2" data-filter="cakes">Cakes</a>
+    <a href="#" class="btn btn-yellow filter-btn m-2" data-filter="pies">Pies</a>
+    <a href="#" class="btn btn-yellow filter-btn m-2" data-filter="breads">Breads</a>
+    <a href="#" class="btn btn-yellow filter-btn m-2" data-filter="treats">Treats</a>
+  </div>
+</div>
+<!-- End of Filter Buttons -->
+<!-- Search Box -->
+<div class="row">
+  <div class="col-10 mx-auto col-md-6">
+    <form>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text search-box" id="search-icon">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Item..." id="search-item">
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End of Search Box -->
+<!-- Store Items -->
+<div class="row store-items" id="store-items">
+  <!-- Single Items -->
+  <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item pies" data-item="banoffee pie">
+    <div class="card single-item">
+      <div class="img-container">
+        <img src="img/banoffeePie.jpg" class="card-img-top store-img" alt="">
+        <span class="store-item-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-between">
+          <h5 id="store-item-name">Banoffee Pie</h5>
+          <h5 class="store-item-value">$35</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End of Single Items -->
+  <!-- Single Items -->
+  <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cakes" data-item="death by chocolate">
+      <div class="card single-item">
+        <div class="img-container">
+          <img src="img/deathByChocolate.jpg" class="card-img-top store-img" alt="">
+          <span class="store-item-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+        </div>
+        <div class="card-body">
+          <div class="card-text d-flex justify-content-between">
+            <h5 id="store-item-name">Death by Chocolate</h5>
+            <h5 class="store-item-value">$45</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- End of Single Items -->
+    <!-- Single Items -->
+    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item treats" data-item="plum tart">
+        <div class="card single-item">
+          <div class="img-container">
+            <img src="img/plumTart.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between">
+              <h5 id="store-item-name">Plum Tart</h5>
+              <h5 class="store-item-value">$35</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End of Single Items -->
+      <!-- Single Items -->
+  <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item pies" data-item="peach pie">
+      <div class="card single-item">
+        <div class="img-container">
+          <img src="img/georgiaPeachPie.jpg" class="card-img-top store-img" alt="">
+          <span class="store-item-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+        </div>
+        <div class="card-body">
+          <div class="card-text d-flex justify-content-between">
+            <h5 id="store-item-name">Georgia Peach Pie</h5>
+            <h5 class="store-item-value">$35</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- End of Single Items -->
+    <!-- Single Items -->
+    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item breads" data-item="challah bread">
+        <div class="card single-item">
+          <div class="img-container">
+            <img src="img/challahBread.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between">
+              <h5 id="store-item-name">Challah Bread</h5>
+              <h5 class="store-item-value">$15</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End of Single Items -->
+      <!-- Single Items -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item treats" data-item="citrus tart">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/citrusTart.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between">
+                <h5 id="store-item-name">Citrus Tart</h5>
+                <h5 class="store-item-value">$25</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- End of Single Items -->
+        <!-- Single Items -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item breads" data-item="rosemary bread">
+            <div class="card single-item">
+              <div class="img-container">
+                <img src="img/rosemaryBread.jpg" class="card-img-top store-img" alt="">
+                <span class="store-item-icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+              </div>
+              <div class="card-body">
+                <div class="card-text d-flex justify-content-between">
+                  <h5 id="store-item-name">Rosemary Bread</h5>
+                  <h5 class="store-item-value">$15</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- End of Single Items -->
+          <!-- Single Items -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item treats" data-item="rainbow cookies">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/rainbowCookies.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between">
+                <h5 id="store-item-name">Italian Cookies</h5>
+                <h5 class="store-item-value">$15</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- End of Single Items -->
+        <!-- Single Items -->
+  <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item treats" data-item="blueberry crumble bar">
+      <div class="card single-item">
+        <div class="img-container">
+          <img src="img/blueberryCrumbleBar.jpg" class="card-img-top store-img" alt="">
+          <span class="store-item-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </span>
+        </div>
+        <div class="card-body">
+          <div class="card-text d-flex justify-content-between">
+            <h5 id="store-item-name">Blueberry Crumble Bar</h5>
+            <h5 class="store-item-value">$15</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- End of Single Items -->
+    <!-- Single Items -->
+    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item pies" data-item="cherry pie">
+        <div class="card single-item">
+          <div class="img-container">
+            <img src="img/glutenFreeCherryPie.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between">
+              <h5 id="store-item-name">GF Cherry Pie</h5>
+              <h5 class="store-item-value">$35</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End of Single Items -->
+      <!-- Single Items -->
+      <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item breads" data-item="bread design">
+          <div class="card single-item">
+            <div class="img-container">
+              <img src="img/breadDesign.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between">
+                <h5 id="store-item-name">Custom Bread Design</h5>
+                <h5 class="store-item-value">$25</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- End of Single Items -->
+        <!-- Single Items -->
+    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cakes" data-item="blueberry lemon loaf">
+        <div class="card single-item">
+          <div class="img-container">
+            <img src="img/blueberryLemon.jpg" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between">
+              <h5 id="store-item-name">Blueberry Lemon Loaf</h5>
+              <h5 class="store-item-value">$25</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End of Single Items -->
+</div>
+<!-- End of Store Items -->
+  </div>
+</section>
+<!-- End of Store Section -->
+
+<!-- Services -->
+<section id="services" class="services py-5">
+  <div class="container">
+    <div class="row">
+<!-- Single Service -->
+      <div class="col-md-4 text-center my-3">
+        <img src="img/cake2.png" alt="bread icon">
+        <h6 class="my-3 service-title">Cake</h6>
+        <p class="w-75 mx-auto text-left service-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa voluptatibus et, dolore fugit porro consectetur blanditiis unde dignissimos nulla nisi?
+        </p>
+      </div>
+<!-- End of Single Service -->
+<!-- Single Service -->
+      <div class="col-md-4 text-center my-3">
+          <img src="img/bread-icon.png" alt="cupcake icon">
+          <h6 class="my-3 service-title">Bread</h6>
+          <p class="w-75 mx-auto text-left service-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa voluptatibus et, dolore fugit porro consectetur blanditiis unde dignissimos nulla nisi?
+          </p>
+        </div>
+<!-- End of Single Service -->
+<!-- Single Service -->
+      <div class="col-md-4 text-center my-3">
+          <img src="img/pie.png" alt="candy icon">
+          <h6 class="my-3 service-title">Pies</h6>
+          <p class="w-75 mx-auto text-left service-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa voluptatibus et, dolore fugit porro consectetur blanditiis unde dignissimos nulla nisi?
+          </p>
+        </div>
+<!-- End of Single Service -->
+    </div>
+  </div>
+</section>
+<!-- End of Services -->
+
+
+
+<!--Footer-->
+<footer class="container-fluid text-center" id="contact">
+  <div class="row">
+  <div class="col-lg-6">
+    <h6>123 Main St. Boca Raton, FL 33431</h6>
+    <h6>Phone Number: (561) 283-5701</h6>
+    <h6>Email Address: ForGoodnessCakes@gmail.com</h6><br>
+    <p>Copyright &#169; 2019 All rights reserved.</p>
+  </div>
+  <div class="col-lg-6">
+    <h3>Connect With Us</h3>
+    <br>
+    <a href="https://www.facebook.com/sarinarosita" target="_blank" class="fab fa-facebook"></a>
+    <a href="#" class="fab fa-twitter"></a>
+    <a href="#" class="fab fa-instagram"></a>
+    <a href="#" class="fab fa-linkedin"></a>
+  </div>
+</div>
+</footer> 
+<!-- End of Footer -->
+
+  <!-- jquery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
